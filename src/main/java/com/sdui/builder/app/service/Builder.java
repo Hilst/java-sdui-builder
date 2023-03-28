@@ -8,12 +8,12 @@ import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.sdui.builder.app.Utils.ArraySelector;
-import com.sdui.builder.app.Utils.Path;
 import com.sdui.builder.app.model.layout.Content;
 import com.sdui.builder.app.model.layout.Layout;
 import com.sdui.builder.app.model.layout.Page;
 import com.sdui.builder.app.model.layout.Section;
+import com.sdui.builder.app.utils.ArraySelector;
+import com.sdui.builder.app.utils.Path;
 
 /**
  * IN LAYOUT (OBJECT PARSED) AND DATA (JSON NODE NOT PARSABLE BUSINESS)

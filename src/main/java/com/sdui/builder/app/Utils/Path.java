@@ -1,4 +1,4 @@
-package com.sdui.builder.app.Utils;
+package com.sdui.builder.app.utils;
 
 import lombok.Getter;
 
