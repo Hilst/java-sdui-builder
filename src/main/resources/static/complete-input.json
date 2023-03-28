@@ -11,11 +11,11 @@
 			"d": [
 				{
 					"dd": "dd0",
-                    "ee": "ee0"
+					"ee": "ee0"
 				},
 				{
 					"dd": "dd1",
-                    "ee": "ee1"
+					"ee": "ee1"
 				}
 			]
 		}
@@ -35,6 +35,11 @@
 								"content_id": "content-id-111",
 								"content_order": 1,
 								"value": "data.a"
+							},
+							{
+								"content_id": "content-id-112",
+								"content_order": 1,
+								"value": "thing"
 							}
 						]
 					},
