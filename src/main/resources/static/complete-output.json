@@ -13,6 +13,11 @@
                             "content_id": "content-id-111",
                             "content_order": 1,
                             "value": "a"
+                        },
+                        {
+                            "content_id": "content-id-112",
+                            "content_order": 1,
+                            "value": "thing"
                         }
                     ]
                 },
