@@ -1,0 +1,60 @@
+{
+    "layout": {
+        "layout_code": "layout-code",
+        "layout_pages": [
+            {
+                "page_id": "page-id-1",
+                "page_order": 1,
+                "page_sections": [
+                    {
+                        "section_id": "section-id-11",
+                        "section_order": 1,
+                        "section_contents": [
+                            {
+                                "content_id": "content-id-111",
+                                "content_order": 1,
+                                "value": "a"
+                            }
+                        ]
+                    },
+                    {
+                        "section_id": "section-id-13",
+                        "section_order": 1,
+                        "section_contents": [
+                            {
+                                "content_id": "content-id-131",
+                                "content_order": 1,
+                                "value": "b"
+                            },
+                            {
+                                "content_id": "content-id-132",
+                                "content_order": 1,
+                                "value": "c1"
+                            },
+                            {
+                                "content_id": "content-id-133",
+                                "content_order": 1,
+                                "value": "c2"
+                            },
+                            {
+                                "content_id": "content-id-135",
+                                "content_order": 1,
+                                "value": "dd0"
+                            },
+                            {
+                                "content_id": "content-id-136",
+                                "content_order": 1,
+                                "value": "dd1"
+                            },
+                            {
+                                "content_id": "content-id-137",
+                                "content_order": 1,
+                                "value": "ee1"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
