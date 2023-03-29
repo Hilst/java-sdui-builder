@@ -130,7 +130,7 @@ public class Builder {
             return null;
         }
 
-        return node.textValue();
+        return treatmentNodeOutput(node);
     }
 
     private LinkedList<Path> pathsFromValue(String value) {
@@ -161,5 +161,19 @@ public class Builder {
             paths.removeFirst(); 
         }
         return paths;
+    }
+
+    private String treatmentNodeOutput(JsonNode node) {
+
+        if (node.isNull() || !node.isValueNode()) { return null; }
+
+        switch (node.getNodeType()) {
+            case STRING:
+                return node.textValue();
+            case NUMBER:
+                return node.numberValue().toString();
+            default:
+                return null;
+        }
     }
 }
