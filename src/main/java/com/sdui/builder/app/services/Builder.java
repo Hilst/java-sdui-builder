@@ -74,7 +74,7 @@ public class Builder {
         if (node.isMissingNode()) {
             ArraySelectPathfinder asPathfinder = new ArraySelectPathfinder(value);
             String newPath = asPathfinder.calculatePath(data);
-            if (newPath != null) return treatmentNodeOutput(node.at(newPath));
+            if (newPath != null) return treatmentNodeOutput(data.at(newPath));
         }
         return treatmentNodeOutput(node);
     }
