@@ -10,6 +10,7 @@ import com.sdui.builder.app.models.layout.Content;
 import com.sdui.builder.app.models.layout.Layout;
 import com.sdui.builder.app.models.layout.Page;
 import com.sdui.builder.app.models.layout.Section;
+import com.sdui.builder.app.utils.ArraySelectPathfinder;
 
 @Service
 public class Builder {
@@ -54,7 +55,7 @@ public class Builder {
 
             String value = null;
             if (content.getValue().contains("data/")) {
-                value = buildValue(content.getValue().substring(4), data, false);
+                value = buildValue(content.getValue().substring(4), data);
             } else if (!content.getValue().isBlank()) {
                 value = content.getValue();
             }
@@ -68,15 +69,18 @@ public class Builder {
         return newContents;
     }
 
-    private String buildValue(String value, JsonNode data, Boolean fromNode) {
+    private String buildValue(String value, JsonNode data) {
         JsonNode node = data.at(value);
+        if (node.isMissingNode()) {
+            ArraySelectPathfinder asPathfinder = new ArraySelectPathfinder(value);
+            String newPath = asPathfinder.calculatePath(data);
+            if (newPath != null) return treatmentNodeOutput(node.at(newPath));
+        }
         return treatmentNodeOutput(node);
     }
 
     private String treatmentNodeOutput(JsonNode node) {
-        if (node.isNull() || !node.isValueNode()) {
-            return null;
-        }
+        if (node.isNull() || !node.isValueNode()) return null;
         switch (node.getNodeType()) {
             case STRING:
                 return node.textValue();
