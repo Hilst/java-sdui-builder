@@ -12,7 +12,7 @@
                         {
                             "content_id": "content-id-111",
                             "content_order": 1,
-                            "value": "a"
+                            "value": "2000"
                         },
                         {
                             "content_id": "content-id-112",
@@ -49,11 +49,6 @@
                             "content_id": "content-id-136",
                             "content_order": 1,
                             "value": "dd1"
-                        },
-                        {
-                            "content_id": "content-id-137",
-                            "content_order": 1,
-                            "value": "ee1"
                         }
                     ]
                 }
